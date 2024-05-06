@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/shared/navbar";
 
 export const metadata: Metadata = {
   title: "Hooks Store",
@@ -15,10 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" href="/hook-store.png" />
-      </head>
-      <body className={`${GeistSans.variable} font-sans`}>
+      <link rel="icon" href="/icon.png" />
+      <body className={`${GeistSans.variable} font-sans min-h-screen`}>
         <Navbar />
         {children}
       </body>

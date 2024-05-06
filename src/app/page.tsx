@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Hero from "@/components/blocks/hero";
+import Container from "@/components/shared/container";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="max-w-screen-lg m-auto grid gap-10">
-      
-    </div>
+    <>
+      <Hero />
+    </>
   );
 };
 

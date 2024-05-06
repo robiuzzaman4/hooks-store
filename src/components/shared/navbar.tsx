@@ -5,15 +5,15 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="w-full py-4">
+    <nav className="w-full py-4 z-50 border-b border-b-secondary">
       <Container className="w-full flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-1">
           <Image
-            src="/hook-store.png"
+            src="/icon.png"
             alt="logo"
             height={1080}
             width={1080}
-            className="h-10 w-10 shadow-sm rounded-lg"
+            className="h-8 w-8 shadow-sm rounded-md"
           />
           <span className="text-xl font-semibold">Hook Store</span>
         </Link>
