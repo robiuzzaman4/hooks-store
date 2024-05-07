@@ -9,14 +9,14 @@ const Hero = () => {
   return (
     <div className="min-h-[calc(100vh-72px)] w-full grid place-items-center relative">
       <Container>
-        <div className="w-full max-w-2xl mx-auto py-12 grid gap-4">
-          <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold">
+        <div className="w-full max-w-xl mx-auto py-12 grid gap-2">
+          <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
             {hero.title}
           </h1>
-          <p className="text-center md:text-lg text-foreground">
+          <p className="text-center md:text-lg text-foreground md:px-12 opacity-80">
             {hero.subtitle}
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 mt-4">
             <Button asChild>
               <Link href={hero.action.browse.url}>
                 {hero.action.browse.title}
