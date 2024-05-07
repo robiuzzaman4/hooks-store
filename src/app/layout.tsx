@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar";
 
 export const metadata: Metadata = {
-  title: "Hooks Store",
-  description: "A list of react custom hooks",
+  title: "Hook Store",
+  description: "A Collection of Custom React Hooks",
 };
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="min-h-[calc(100vh-72px)] w-full grid place-items-center">
+    <div className="min-h-[calc(100vh-72px)] w-full grid place-items-center relative">
       <Container>
         <div className="w-full max-w-2xl mx-auto py-12 grid gap-4">
           <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -41,6 +41,11 @@ const Hero = () => {
           </div>
         </div>
       </Container>
+      {/* pillars */}
+      <div className="absolute h-full w-fit mx-auto flex items-center justify-center gap-4 -z-10">
+        <div className="h-full w-8 md:w-12 lg:w-16 bg-primary-foreground"></div>
+        <div className="h-full w-8 md:w-12 lg:w-16 bg-primary-foreground"></div>
+      </div>
     </div>
   );
 };
