@@ -13,12 +13,12 @@ const Hero = () => {
           <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
             {hero.title}
           </h1>
-          <p className="text-center md:text-lg text-foreground md:px-12 opacity-80">
+          <p className="text-center md:text-lg text-muted-foreground md:px-12">
             {hero.subtitle}
           </p>
           <div className="flex items-center justify-center gap-4 mt-4">
             <Button asChild>
-              <Link href={hero.action.browse.url}>
+              <Link href={"/docs"}>
                 {hero.action.browse.title}
               </Link>
             </Button>
