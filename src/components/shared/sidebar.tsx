@@ -27,10 +27,13 @@ const items = [
 const Sidebar = () => {
   return (
     <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 lg:sticky lg:block">
-      <ScrollArea className="relative overflow-hidden h-full py-6 pr-6 bg-red-200">
-        <ul className="list-none grid gap-10">
+      <ScrollArea className="relative overflow-hidden h-full py-6 pr-6">
+        <ul className="list-none grid gap-2 w-full">
           {items.map((item, i) => (
-            <li key={i}>
+            <li
+              key={i}
+              className="w-full text-sm text-muted-foreground hover:underline"
+            >
               <a href={`#${item.name}`}>{item.name}</a>
             </li>
           ))}
