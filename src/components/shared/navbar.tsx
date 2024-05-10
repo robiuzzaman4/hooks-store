@@ -9,17 +9,17 @@ import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const pathname = usePathname();
-  
+
   return (
-    <nav className="w-full py-4 z-50 border-b border-b-secondary bg-background/50 backdrop-blur-lg sticky top-0">
-      <Container className="w-full flex items-center justify-between gap-4">
+    <nav className="sticky top-0 z-50 w-full border-b border-b-secondary bg-background/50 py-4 backdrop-blur-lg">
+      <Container className="flex w-full items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-1">
           <Image
             src="/icon.png"
             alt="logo"
             height={1080}
             width={1080}
-            className="h-8 w-8 shadow-sm rounded-md"
+            className="h-8 w-8 rounded-md shadow-sm"
           />
           <span className="text-xl font-semibold">Hook Store</span>
         </Link>

@@ -7,20 +7,18 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="min-h-[calc(100vh-72px)] w-full grid place-items-center relative">
+    <div className="relative grid min-h-[calc(100vh-72px)] w-full place-items-center">
       <Container>
-        <div className="w-full max-w-xl mx-auto py-12 grid gap-2">
-          <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+        <div className="mx-auto grid w-full max-w-xl gap-2 py-12">
+          <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-5xl">
             {hero.title}
           </h1>
-          <p className="text-center md:text-lg text-muted-foreground md:px-12">
+          <p className="text-center text-muted-foreground md:px-12 md:text-lg">
             {hero.subtitle}
           </p>
-          <div className="flex items-center justify-center gap-4 mt-4">
+          <div className="mt-4 flex items-center justify-center gap-4">
             <Button asChild>
-              <Link href={"/docs"}>
-                {hero.action.browse.title}
-              </Link>
+              <Link href={"/docs"}>{hero.action.browse.title}</Link>
             </Button>
             <Button variant="outline" asChild>
               <Link
@@ -42,9 +40,9 @@ const Hero = () => {
         </div>
       </Container>
       {/* pillars */}
-      <div className="absolute h-full w-fit mx-auto flex items-center justify-center gap-4 -z-10">
-        <div className="h-full w-8 md:w-12 lg:w-16 bg-primary-foreground"></div>
-        <div className="h-full w-8 md:w-12 lg:w-16 bg-primary-foreground"></div>
+      <div className="absolute -z-10 mx-auto flex h-full w-fit items-center justify-center gap-4">
+        <div className="h-full w-8 bg-primary-foreground md:w-12 lg:w-16"></div>
+        <div className="h-full w-8 bg-primary-foreground md:w-12 lg:w-16"></div>
       </div>
     </div>
   );

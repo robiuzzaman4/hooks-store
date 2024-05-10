@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/icon.png" />
-      <body className={`${GeistSans.variable} font-sans min-h-screen`}>
+      <body className={`${GeistSans.variable} min-h-screen font-sans`}>
         <Navbar />
         {children}
       </body>

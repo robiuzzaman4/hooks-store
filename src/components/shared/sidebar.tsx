@@ -27,8 +27,8 @@ const items = [
 const Sidebar = () => {
   return (
     <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 lg:sticky lg:block">
-      <ScrollArea className="relative overflow-hidden h-full py-6 pr-6">
-        <ul className="list-none grid gap-2 w-full">
+      <ScrollArea className="relative h-full overflow-hidden py-6 pr-6">
+        <ul className="grid w-full list-none gap-2">
           {items.map((item, i) => (
             <li
               key={i}

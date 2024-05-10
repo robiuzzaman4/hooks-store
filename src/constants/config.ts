@@ -1,6 +1,7 @@
 export const hero = {
   title: "A Collection of Custom React Hooks",
-  subtitle: "To Ensure Fancy Development with Ready-to-Use Code Snippets. Accessible. Customizable. Open Source.",
+  subtitle:
+    "To Ensure Fancy Development with Ready-to-Use Code Snippets. Accessible. Customizable. Open Source.",
   action: {
     github: {
       title: "Github",
