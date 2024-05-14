@@ -1,5 +1,7 @@
 import React from "react";
 import { ScrollArea } from "../ui/scroll-area";
+import { index } from "@/constants";
+import Link from "next/link";
 
 const items = [
   { id: 1, name: "useIdNameArray" },
@@ -26,18 +28,44 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 lg:sticky lg:block">
+    <aside className="top-s fixed z-30 hidden h-[calc(100vh-72px)] w-full shrink-0 lg:sticky lg:block">
       <ScrollArea className="relative h-full overflow-hidden py-6 pr-6">
-        <ul className="grid w-full list-none gap-2">
-          {items.map((item, i) => (
-            <li
-              key={i}
-              className="w-full text-sm text-muted-foreground hover:underline"
-            >
-              <a href={`#${item.name}`}>{item.name}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex h-full w-full flex-col gap-4">
+          {/* overview */}
+          <div className="flex w-full flex-col gap-4">
+            <p className="w-full text-sm font-semibold capitalize text-foreground">
+              {index.overview.category}
+            </p>
+            <div className="grid w-full gap-2">
+              {index.overview.subcategories.map((item, i) => (
+                <Link
+                  href={item.path}
+                  key={i}
+                  className="w-full cursor-pointer text-sm text-muted-foreground hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* hooks */}
+          <div className="flex w-full flex-col gap-4">
+            <p className="w-full text-sm font-semibold capitalize text-foreground">
+              {index.hooks.category}
+            </p>
+            <div className="grid w-full gap-2">
+              {index.hooks.subcategories.map((item, i) => (
+                <Link
+                  href={item.path}
+                  key={i}
+                  className="w-full cursor-pointer text-sm text-muted-foreground hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </ScrollArea>
     </aside>
   );

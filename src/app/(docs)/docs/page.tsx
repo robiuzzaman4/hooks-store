@@ -4,7 +4,7 @@ import React from "react";
 const Docs = () => {
   return (
     <div className="">
-      <h1>Docs</h1>
+      <h1>Docs Introduction Page</h1>
     </div>
   );
 };
